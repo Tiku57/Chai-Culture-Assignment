@@ -38,6 +38,15 @@ chai-culture/
 ├── script.js       # Form logic and interactivity
 └── README.md       # Project documentation
 ```
+---
+🎨 Design Choices
+(As requested in the assignment)
 
+Visual Identity: I anchored the design in a "Royal Dark Mode" aesthetic. Using a deep brown/black radial gradient creates a cinematic spotlight effect that allows the gold accents to pop, simulating the contrast of gold jewelry on dark velvet.
+
+Typography: I paired Playfair Display for headings to evoke tradition and luxury, with Lato for body text to ensure modern legibility on mobile devices.
+
+Technical Execution: I built this using pure HTML, CSS, and JS to demonstrate mastery of core web technologies without relying on heavy frameworks. I utilized a "Glassmorphism" effect for the main card to give it depth and a modern feel while keeping the content legible. The layout is fully responsive, stacking vertically on mobile with adjusted padding for touch targets.
+---
 👤 Author
 Aaditya Sattawan
