@@ -1,9 +1,5 @@
 # Chai Culture - "Coming Soon" Landing Page
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Tech Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JS-orange)
-
 ## 📖 Overview
 
 This project is a premium "Coming Soon" landing page for **Chai Culture**, a brand bringing the royal tradition of Indian chai to the world. 
