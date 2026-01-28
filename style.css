@@ -1,0 +1,271 @@
+/* --- Variables for Royal Palette --- */
+:root {
+    --color-gold: #D4AF37;
+    --color-gold-dim: #b59021;
+    --color-brown-dark: #1A120B;
+    --color-brown-light: #3E2723;
+    --color-cream: #FFF8E1;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-brown-light), #000);
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: var(--color-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- Decorative Background Glows --- */
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.glow-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-gold);
+    top: -50px;
+    left: -50px;
+}
+
+.glow-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-brown-light);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* --- Main Layout --- */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Sits above glows */
+    text-align: center;
+}
+
+/* --- Glassmorphism Card --- */
+.glass-card {
+    background: rgba(26, 18, 11, 0.7); /* Dark semi-transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+/* --- Typography & Branding --- */
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 2rem;
+    color: var(--color-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.brand-name {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--color-cream), var(--color-gold), var(--color-cream));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-gold);
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 248, 225, 0.8);
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+}
+
+/* --- Badge --- */
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+}
+
+/* --- Form Styles --- */
+#signup-form {
+    display: flex;
+    gap: 10px;
+    max-width: 480px;
+    margin: 0 auto 2rem auto;
+}
+
+.input-group {
+    position: relative;
+    flex-grow: 1;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gold);
+    opacity: 0.7;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 14px 14px 14px 45px; /* Left padding for icon */
+    background: rgba(255, 248, 225, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+button {
+    padding: 14px 28px;
+    background: linear-gradient(to right, var(--color-gold), var(--color-gold-dim));
+    border: none;
+    border-radius: 8px;
+    color: var(--color-brown-dark);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* --- Success Message & Utility --- */
+.hidden {
+    display: none;
+}
+
+#success-message {
+    background: rgba(20, 100, 20, 0.2);
+    border: 1px solid rgba(50, 200, 50, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s;
+}
+
+.success-title {
+    color: #a3e6a3;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.success-desc {
+    color: #e0ffe0;
+    font-size: 0.9rem;
+}
+
+/* --- Social Icons --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    padding-top: 1.5rem;
+}
+
+.social-links a {
+    color: rgba(212, 175, 55, 0.6);
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-gold);
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    opacity: 0.4;
+}
+
+/* --- Keyframes --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    .brand-name {
+        font-size: 2.5rem;
+    }
+    
+    .glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    #signup-form {
+        flex-direction: column;
+    }
+
+    button {
+        justify-content: center;
+        width: 100%;
+    }
+}
