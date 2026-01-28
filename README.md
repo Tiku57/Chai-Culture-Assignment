@@ -47,6 +47,7 @@ Visual Identity: I anchored the design in a "Royal Dark Mode" aesthetic. Using a
 Typography: I paired Playfair Display for headings to evoke tradition and luxury, with Lato for body text to ensure modern legibility on mobile devices.
 
 Technical Execution: I built this using pure HTML, CSS, and JS to demonstrate mastery of core web technologies without relying on heavy frameworks. I utilized a "Glassmorphism" effect for the main card to give it depth and a modern feel while keeping the content legible. The layout is fully responsive, stacking vertically on mobile with adjusted padding for touch targets.
+
 ---
 👤 Author
 Aaditya Sattawan
